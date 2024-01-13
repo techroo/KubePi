@@ -74,7 +74,7 @@ This should display our one node.
 For the other nodes we run the identical command, only without the --cluster-init and with a pointer to our Node1
 **--server https://10.128.10.21:6443** _Pointer to Node1-Eth0_
 ```
-curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.26.10+k3s1" K3S_KUBECONFIG_MODE="644" K3S_TOKEN="myLittleK3Cluster" sh -s - server --server https://10.128.11.11:6443 --disable traefik --disable servicelb
+curl -sfL https://get.k3s.io | INSTALL_K3S_VERSION="v1.26.10+k3s1" K3S_KUBECONFIG_MODE="644" K3S_TOKEN="myLittleK3Cluster" sh -s - server --server https://10.128.10.21:6443 --disable traefik --disable servicelb
 ```
 We can check the state of our kubernetes nodes using the kubectl command again.  
 ```
